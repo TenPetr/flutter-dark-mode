@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Dark Mode',
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.system,
       theme: ThemeData(
         brightness: Brightness.light,
         accentColor: Colors.blue,

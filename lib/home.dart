@@ -36,23 +36,19 @@ class _HomeState extends State<Home> {
         itemCount: items.length,
         itemBuilder: (context, i) {
           return ListTile(
-            title: Text(items[i].title),
+            title: Text(items[i]
+                .title), // Don´t be confused by "items" list, it´s just for demonstration
             subtitle: Text(items[i].subTitle),
             trailing: IconButton(
               icon: Icon(
                 Icons.tune,
-                color: Theme.of(context).accentColor,
+                color: Theme.of(context)
+                    .accentColor, // When you want to use dynamic color, you have to use Theme.of()
               ),
               onPressed: null,
             ),
           );
         },
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: null,
-        child: Icon(
-          Icons.add,
-        ),
       ),
     );
   }
